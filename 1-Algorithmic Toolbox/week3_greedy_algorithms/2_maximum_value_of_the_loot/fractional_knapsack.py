@@ -1,9 +1,22 @@
 # Uses python3
 import sys
+import numpy as np
 
 def get_optimal_value(capacity, weights, values):
     value = 0.
     # write your code here
+    unit_value = np.array([values[i]*1./weights[i] for i in range(len(values))])
+    sorted_idx = np.argsort(unit_value)
+    total_weight = 0.
+    i = 1
+    while total_weight < capacity:
+    	item_weight = min(capacity - total_weight, weights[sorted_idx[-i]])
+    	value += item_weight*unit_value[sorted_idx[-i]]
+    	total_weight += item_weight
+    	i+=1
+    	print item_weight
+    	print total_weight
+    	print value
 
     return value
 
