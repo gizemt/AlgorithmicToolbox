@@ -1,13 +1,15 @@
 # Uses python3
 import sys
+import numpy as np
 
 def get_majority_element(a, left, right):
-    if left == right:
-        return -1
-    if left + 1 == right:
-        return a[left]
-    #write your code here
-    return -1
+    a_sorted = np.sort(a)
+    n_maj = n//2
+    flag = -1
+    for i in range(len(a)-n_maj):
+        if a_sorted[i] == a_sorted[i+n_maj]:
+            flag = 1
+    return flag
 
 if __name__ == '__main__':
     input = sys.stdin.read()
