@@ -1,9 +1,10 @@
 # Uses python3
-import sys
+import sys 
 
 def fast_count_segments(starts, ends, points):
     cnt = [0] * len(points)
     #write your code here
+
     return cnt
 
 def naive_count_segments(starts, ends, points):
