@@ -13,7 +13,7 @@ def max_dot_product(a, b):
 
 if __name__ == '__main__':
     input = sys.stdin.read()
-    data = [3, 1, -3, -5, -2, 4, 1]#list(map(int, input.split()))
+    data = list(map(int, input.split()))
     n = data[0]
     a = data[1:(n + 1)]
     b = data[(n + 1):]

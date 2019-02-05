@@ -14,9 +14,9 @@ def get_optimal_value(capacity, weights, values):
     	value += item_weight*unit_value[sorted_idx[-i]]
     	total_weight += item_weight
     	i+=1
-    	print item_weight
-    	print total_weight
-    	print value
+    	# print item_weight
+    	# print total_weight
+    	# print value
 
     return value
 
